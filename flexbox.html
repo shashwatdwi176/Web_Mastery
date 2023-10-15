@@ -1,0 +1,126 @@
+<!-- 
+
+    Flexbox - 1d layout method
+
+    It is the powerful tool to make layout of the websites
+
+    The parent container is known as flex container and the elements inside it known as flex items
+
+    has two axis -
+    - main axis (horizontal)
+    - cross axis (vertical)
+
+ -->
+
+
+<!--  
+ /* diplay in row because bydefault property of flexdirection is row 
+            
+ properties- 
+ - row
+ -column
+ -row-reverse
+ -column-reverse
+ */
+
+ /* flex wrap 
+ 
+ propeties-
+ -wrap
+ -no-wrap
+ -wrap-reverse
+ */
+
+ /* Justify content
+ adjust the element with respect to  main axis
+
+ properties-
+ 
+ -center
+ -start
+ -end
+ -baseline
+ -space around
+ -space between
+ -space even
+ 
+ /* align-items 
+ adjust element w.r.t cross axis
+ 
+ properties-
+ strech
+ 
+ /* align content
+     to remove the by default spacing due to wrap
+ 
+/* flex- item */
+/* properties-
+-order - to maintain the squence
+
+flex-shrink - set the shrinking speed of flex element
+
+flex-grow - set the growing spped of the flex element
+     - by default the element aquire all the remaining space available
+
+align-self - adjust element wrt cross axis
+*/ -->
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+    .container{
+        background-color: blanchedalmond;
+        height: 1000px;
+        border: 2px solid brown;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; */
+        justify-content: center;
+        align-items: center;
+        align-content:start; 
+    }
+    .cont{
+        height: 200px;
+        width: 200px;
+        margin: 2px;
+        padding: 2px;
+        border: 2px solid black;
+    }
+    #cont1{
+        background-color: red;
+        order: 500;
+        flex-shrink: 5;
+    }
+    #cont2{
+        background-color: aqua;
+        flex-grow: 10;
+    }
+    #cont3{
+        background-color: brown;
+    }
+    #cont4{
+        background-color: blueviolet;
+        order: -1;
+        align-self: center;
+    }
+
+
+    
+
+    </style>
+ </head>
+ <body>
+    <!-- first make a flex container -->
+   <div class="container">
+    <div class="cont" id="cont1">Container1</div>
+    <div class="cont" id="cont2">Container2</div>
+    <div class="cont" id="cont3">Container3</div>
+    <div class="cont" id="cont4">Container4</div>
+   </div>
+ </body>
+ </html>
